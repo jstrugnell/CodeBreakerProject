@@ -14,14 +14,15 @@ function guess() {
         return false;
     }
     else{
-        attempt+=1;
+        debugger;
+        attempt.value = parseInt(attempt.value) + 1;
         if (getResults(input.value)) {
             setMessage("You Win!");
             showAnswer(true);
             showReplay();
         }
         else {
-            if (attempt === 10) {
+            if (attempt.value === '10') {
                 setMessage("You Lose!");
                 showAnswer(false);
                 showReplay();
