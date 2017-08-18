@@ -15,13 +15,13 @@ function guess() {
     else{
         attempt+=1;
         if (getResults(input.value)) {
-            setMessage("You win!!!");
+            setMessage("You Win!");
             showAnswer(true);
             showReplay();
         }
         else {
             if (attempt === 10) {
-                setMessage("You lose!!!");
+                setMessage("You Lose!!!");
                 showAnswer(false);
                 showReplay();
             } 
@@ -82,6 +82,7 @@ function validateInput(input){
         setMessage("Guesses must be exactly 4 characters long.");
         return false;
     }
+    return true;
 }
 
 function setMessage(msg) {
